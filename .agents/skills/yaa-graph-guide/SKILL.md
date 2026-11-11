@@ -1,41 +1,68 @@
 ---
 name: yaa-graph-guide
-description: Read the project's YAAGRAFGIDE20.md before code or UI work and maintain its brand and architecture constraints.
+description: Apply YAA architecture, brand tokens, component states, themes, and dashboard migration rules before code or UI work.
 ---
 
 # YAA Graph Guide
 
-Use this skill for development, refactoring, UI implementation, and UI review in a YAA repository that contains `YAAGRAFGIDE20.md`.
+Use this skill for development, refactoring, UI implementation, design-system work, and UI review in a YAA repository.
 
-## Source of truth
+## Required context
 
-Before writing or changing code, read the complete `./YAAGRAFGIDE20.md` from the active project root. Treat it as the combined source of truth for:
+Before writing or changing code, read the complete YAAGRAFGIDE20.md from the active project root.
 
-- brand colors, typography, spacing, components, and visual restrictions;
-- repository structure, modules, dependencies, and architecture flows.
+If the project uses this package as its source, also read:
 
-Do not rely on memory or on a partial read of `BRANDBOOK.md` or the codebase when the graph guide is present.
+- tokens.css;
+- migration-guide.md;
+- components/README.md;
+- the relevant files in components/, themes/, and dashboard-migration.css.
+
+Treat the graph guide and the implementation files as one system:
+
+- YAAGRAFGIDE20.md explains architecture, provenance, and constraints.
+- tokens.css is the implementation source for visual tokens.
+- components/components.css is the shared component layer.
+- migration-guide.md records product decisions and migration acceptance criteria.
+
+## Design-system rules
+
+- Prefer existing CSS custom properties over local HEX, font, spacing, radius, or shadow values.
+- Use #0E0E0E text on the primary green #00E67E.
+- Use #444FC5 as the secondary brand color with light text.
+- Preserve both dark and light themes.
+- Check default, hover, active, focus-visible, disabled, loading, and invalid states where applicable.
+- Keep success, warning, error, and info visually distinct.
+- Do not add a new token without recording its source or product decision in migration-guide.md.
+- Do not include paid font files without confirmed licensing. Use the documented fallback while licensing is unresolved.
+- Do not change business data, formulas, filters, or identifiers during a visual migration.
 
 ## Missing graph guide
 
-If `./YAAGRAFGIDE20.md` is absent:
+If YAAGRAFGIDE20.md is absent:
 
-1. Check whether `node` and `npx` are available before running any terminal command that depends on them.
+1. Check whether node and npx are available before running a command that depends on them.
 2. If both are available, generate the technical graph with:
 
-   ```sh
    npx -y @colbymchenry/codegraph build --output ./docs/CODE_STRUCT.md
-   ```
 
-3. Combine `./BRANDBOOK.md` and `./docs/CODE_STRUCT.md` into `./YAAGRAFGIDE20.md`, preserving both sources and separating them with a Markdown divider.
-4. If `node` or `npx` is unavailable, do not report a failed build as the result. Use available filesystem-reading tools to scan the repository directly, create a text map of folders, source files, key modules, and detectable imports, then combine that map with `BRANDBOOK.md` into `YAAGRAFGIDE20.md`.
+3. Combine BRANDBOOK.md and docs/CODE_STRUCT.md into YAAGRAFGIDE20.md.
+4. If node or npx is unavailable, scan the repository with available filesystem tools and create a clearly marked fallback architecture map.
+5. If BRANDBOOK.md is missing, do not invent brand tokens.
 
-If `BRANDBOOK.md` is missing, do not invent brand tokens. Report the missing source and keep any generated architecture map clearly marked as incomplete.
+## Migration workflow
 
-## Applying the guide
+For a dashboard migration:
 
-- Prefer existing tokens from `YAAGRAFGIDE20.md`; do not introduce unapproved colors or fonts as if they were brand defaults.
-- If a user explicitly requests a non-brand value, identify it as an intentional exception and isolate it from global tokens.
-- For UI review, check the implementation against the brand section and distinguish exact PDF values from visual interpretations and unspecified values.
-- For code changes, follow the module boundaries and dependency relationships described in the architecture section.
-- Do not copy secrets from `.env` files into the guide, code, logs, or responses.
+1. Scope the dashboard under yaa-dashboard.
+2. Load tokens.css, the selected theme, components/components.css, and dashboard-migration.css.
+3. Preserve the original data and calculations.
+4. Replace the visual shell with tokens and shared components.
+5. Verify the state matrix and contrast.
+6. Compare before/after values and record any new decision.
+
+If a real Storybook runtime is present, create stories for the component state matrix. If it is not present, use storybook/index.html as the framework-agnostic preview.
+
+## Security
+
+Never copy secrets from .env files into the graph guide, code, logs, or responses.
