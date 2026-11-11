@@ -1,77 +1,108 @@
-Установи общий скил YAA Graph Guide на локальный компьютер.
+# YAA Graph Guide
 
-Источник:
-https://github.com/yaaimbi-bit/yaa-graph-guide
+Единый framework-agnostic слой для YAA-дашбордов: токены, темы, компоненты,
+Tailwind v4 bridge и статичный Foundation preview.
 
-Нужно выполнить установку самостоятельно, без инструкций для ручного копирования.
+## Источник решений
 
-1. Определи пользовательскую директорию скилов Codex.
-2. Установи туда папку:
-
-   yaa-graph-guide/
-
-3. Внутри должны находиться:
-
-   - `SKILL.md`
-   - `agents/openai.yaml`
-
-4. Источник файлов:
-
-   `https://github.com/yaaimbi-bit/yaa-graph-guide/tree/main/.agents/skills/yaa-graph-guide`
-
-5. Если доступна project-scoped установка, также скопируй скил в текущий проект:
-
-   `.agents/skills/yaa-graph-guide/`
-
-6. Проверь, что Codex видит скил с именем:
-
-   `$yaa-graph-guide`
-
-7. После установки проверь, что скил умеет читать:
-
-   `YAAGRAFGIDE20.md`
-
-   из репозитория:
-
-   `https://github.com/yaaimbi-bit/yaa-graph-guide`
-
-8. Не проси пользователя копировать файлы вручную. Выполни установку, проверку структуры и сообщи итог.
-
-После установки скил должен автоматически применяться перед генерацией кода, изменением архитектуры или разработкой UI.
-
-
-## Состав репозитория
-
-- tokens.css — единый источник CSS-токенов.
-- themes/light.css и themes/dark.css — темы.
-- components/components.css — 9 framework-agnostic компонентов.
-- components/README.md — варианты, состояния и правила доступности.
-- storybook/index.html — статический preview для быстрой визуальной проверки.
-- dashboard-migration.css — scoped-слой для переноса Tailwind-дашбордов.
-- migration-guide.md — решения, источники и критерии миграции.
-- YAAGRAFGIDE20.md — архитектурный и брендовый контекст.
-- .agents/skills/yaa-graph-guide — скил Codex.
+- `BRANDBOOK.md` — точные значения из `Brand YAA.pdf`.
+- `tokens.css` — единственный CSS-источник токенов.
+- `migration-guide.md` — решения v1, происхождение и намеренно снятые паттерны.
+- `storybook/index.html` — визуальная проверка dark/light без npm runtime.
+- `YAAGRAFGIDE20.md` — главный контекст для AI и команды.
 
 ## Быстрый preview
 
-Открой storybook/index.html в браузере. Переключатель темы показывает dark/light режимы, а preview содержит Card, Button, TextInput, Select, Badge, Chip, SignalCell, DataBar и Callout.
+Открой `storybook/index.html` в браузере. Переключатель показывает обе темы;
+страница содержит Foundations, 9 базовых компонентов и новые dashboard-паттерны.
+Для настоящего Storybook подключи `tokens.css`, `components/components.css`,
+`dashboard-theme.css` и `dashboard-migration.css` к stories выбранного фреймворка.
 
-Для настоящего Storybook runtime подключи tokens.css, components/components.css и dashboard-migration.css к stories выбранного frontend-фреймворка.
+## Структура
 
+```text
+tokens.css                 # цвета, типографика, spacing, радиусы, elevation
+themes/{dark,light}.css    # theme overrides
+components/components.css  # framework-agnostic primitives
+components/README.md       # API mapping и accessibility rules
+dashboard-theme.css        # Tailwind v4 @theme bridge
+dashboard-migration.css    # scoped fallback для уже собранных utility-классов
+storybook/index.html       # статичный dark/light preview
+assets/brand/              # цветной и чёрный SVG-логотипы
+fonts/                     # Roboto Flex, Inter Tight и опубликованный Druck
+```
 
-## Font assets
+## Токены, которые добавлены из старой системы
 
-The public repository includes only the fonts that are safe and required for the design system:
+| Группа | Токены |
+|---|---|
+| Графики | `--yaa-chart-1` … `--yaa-chart-8` |
+| Продукты | `--yaa-accent-hub`, `vanga`, `simmy`, `graph`, `map` |
+| Artist tier | `--yaa-tier-star`, `large`, `mid`, `club`, `micro` |
+| Поверхности | `--yaa-surface-drop`, `input`, `input-focus`, `nav-bg` |
+| Типографика | role aliases от `hero` 64px до `label` 11px; `black: 800` |
+| Elevation | `--yaa-elev-1`, `--yaa-elev-2` |
 
-- `fonts/Roboto_Flex/` — variable Roboto Flex and license files;
-- `fonts/inter/InterTight-Thin.ttf` — supplied Inter Tight Thin;
-- `fonts/inter/InterTight.ttf` — variable Inter Tight for regular, medium and semibold weights.
+Радиусы старой системы `12px/16px` нормализованы в v1 как `10px/14px` для
+контролов и карточек. Glow, blur, gradient text и radial green background
+намеренно не перенесены: новая система держится на плоских поверхностях и
+жёсткой смещённой тени, чтобы бренд работал одинаково в обеих темах.
 
-Druck Wide is a paid font and is not committed to this public repository. The public preview uses the documented `Druck Wide` token with an `Archivo` fallback. Add a licensed web font only in a private product repository. Roboto Serif is not part of the YAA brand system and is not included.
+## Лицензия шрифтов
 
+- `InterTight.ttf` — variable-файл для `400/500/600/700`, рядом лежит `fonts/inter/OFL.txt`.
+- `Roboto Flex` — variable-файл и OFL в `fonts/Roboto_Flex/`.
+- В брендбуке указана роль `Druck Wide`; в систему добавлен предоставленный
+  `Druck Cyrillic Heavy` как фактический display-шрифт. Файл лежит в
+  `fonts/druk/drukcyr-heavy.ttf` и подключается через `--yaa-font-heading`.
+  Веб-лицензия файла пока не подтверждена: публикация сделана по прямому
+  решению владельца проекта, коммерческое использование требует подтверждения.
+- `Roboto Serif` не входит в брендбук и удалён из публичной системы осознанно;
+  он не нужен токенам и весил около 23 МБ.
+- `Press Start 2P` встречался в старом Cerebro как декоративный retro-акцент;
+  оставлен только как необязательный `--yaa-font-retro`, без загрузки файла.
 
-## Migration notes
+## Логотип
 
-- Load `dashboard-migration.css` after Tailwind utilities.
-- The migration layer supports scoped `dark:bg-*`, `dark:text-*` and `dark:border-*` variants without `!important`.
-- Use `--yaa-color-primary-text: #006B3F` for green text and links on light surfaces. Bright `#00E67E` remains a surface/accent color there.
+- В шапке: 36–40px; на титульном экране: 52–64px.
+- Используй `assets/brand/YAA_logo_color.svg` на тёмном фоне и
+  `assets/brand/YAA_logo_black.svg` на светлом.
+- Сохраняй пропорции и clear space не меньше высоты знака по периметру.
+- Для favicon подготовь 32px PNG/ICO и 180px touch icon из утверждённого SVG.
+- В CSP-ограниченной среде встраивай готовый SVG/base64; не рисуй текстовый
+  псевдологотип и не перекрашивай знак вручную.
+
+## Статус раскатки
+
+| Проект из прежнего README | Статус в этой системе |
+|---|---|
+| `yaa-events-dashboard` | готов слой; нужна live-проверка дашборда |
+| `intickets-dashboard` | готов Tailwind bridge; нужна live-проверка |
+| `yaa-fairytale-dashboard` | готов Tailwind bridge; нужна live-проверка |
+| `yaa_kz_dasbhoard` | нужен smoke-test статичного подключения |
+| `yaa-marketing-brief` | нужен smoke-test статичного подключения |
+| остальные YAA-фронты | отдельная инвентаризация и rollout |
+
+`Platinumlist` и `Chatpush` остаются вне области этой системы: это другой бренд.
+
+## Миграция Tailwind v4
+
+Для нового дашборда после `@import "tailwindcss"` подключи
+`dashboard-theme.css`: он связывает `gray-*`, `indigo-*`, `emerald-*` и `green-*`
+с токенами без `!important`. Для уже собранных обычных utility-классов добавь
+`dashboard-migration.css` на корень `.yaa-dashboard`; он отдельно покрывает
+`dark:bg-*`, `dark:text-*` и `dark:border-*`.
+
+Зелёный `#00E67E` используется как поверхность/акцент. На светлой теме ссылки
+и текст используют `--yaa-color-primary-text: #006B3F`, потому что яркий зелёный
+на белом не проходит контраст для обычного текста. На зелёном фоне текст всегда
+`--yaa-text-on-primary: #0E0E0E`.
+
+## Контроль перед публикацией
+
+- проверить dark и light preview;
+- проверить default, hover, active, focus-visible, disabled, loading и invalid;
+- убедиться, что каждый `url()` из `tokens.css` существует;
+- проверить контраст текста и отсутствие локальных HEX в компонентах;
+- сохранить данные, формулы и идентификаторы дашборда;
+- только после визуального review разделить изменения на A/B/V и публиковать.

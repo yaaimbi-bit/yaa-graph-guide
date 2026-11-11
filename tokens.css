@@ -1,4 +1,12 @@
 @font-face {
+  font-family: "Druck Cyrillic Heavy";
+  src: url("./fonts/druk/drukcyr-heavy.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Roboto Flex";
   src: url("./fonts/Roboto_Flex/RobotoFlex-VariableFont_GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf") format("truetype");
   font-style: normal;
@@ -36,6 +44,7 @@
 
   /* Product decisions: semantic states */
   --yaa-color-success: #00E67E;
+  --yaa-color-success-text: #00E67E;
   --yaa-color-warning: #FFD166;
   --yaa-color-error: #FF9871;
   --yaa-color-info: #444FC5;
@@ -55,13 +64,21 @@
   --yaa-surface-2: #1D201E;
   --yaa-surface-3: #252925;
   --yaa-border-subtle: #343A36;
+  --yaa-border-mid: #465149;
   --yaa-border-strong: #5B655E;
 
+  /* Product surfaces from the former dashboard system. */
+  --yaa-surface-drop: #101A14;
+  --yaa-surface-input: rgba(0, 230, 126, 0.04);
+  --yaa-surface-input-focus: rgba(0, 230, 126, 0.08);
+  --yaa-nav-bg: rgba(14, 14, 14, 0.88);
+
   /* Typography */
-  --yaa-font-heading: "Druck Wide", "Archivo", sans-serif;
+  --yaa-font-heading: "Druck Cyrillic Heavy", "Druck Wide", "Archivo", sans-serif;
   --yaa-font-accent: "Roboto Flex", sans-serif;
   --yaa-font-body: "Inter Tight", "Inter", sans-serif;
   --yaa-font-mono: "IBM Plex Mono", monospace;
+  --yaa-font-retro: "Press Start 2P", monospace;
 
   --yaa-font-size-xs: 0.6875rem;
   --yaa-font-size-sm: 0.75rem;
@@ -73,6 +90,16 @@
   --yaa-font-size-3xl: 2.5rem;
   --yaa-font-size-4xl: 3rem;
   --yaa-font-size-display: 4rem;
+  /* Role aliases keep dashboard migrations readable. */
+  --yaa-font-size-hero: 4rem;
+  --yaa-font-size-h1: 2rem;
+  --yaa-font-size-h2: 1.5rem;
+  --yaa-font-size-lg: 1.125rem;
+  --yaa-font-size-input: 1rem;
+  --yaa-font-size-btn: 0.9375rem;
+  --yaa-font-size-sm: 0.8125rem;
+  --yaa-font-size-detail: 0.75rem;
+  --yaa-font-size-label: 0.6875rem;
 
   --yaa-line-height-tight: 0.9;
   --yaa-line-height-heading: 1;
@@ -83,6 +110,7 @@
   --yaa-font-weight-medium: 500;
   --yaa-font-weight-semibold: 600;
   --yaa-font-weight-bold: 700;
+  --yaa-font-weight-black: 800;
 
   --yaa-letter-spacing-brand: -0.015em;
   --yaa-letter-spacing-heading: 0;
@@ -108,6 +136,8 @@
   /* Shadows */
   --yaa-shadow-none: 0 0 0 transparent;
   --yaa-shadow-soft: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.24);
+  --yaa-elev-1: var(--yaa-shadow-soft);
+  --yaa-elev-2: 0 1rem 2.5rem rgba(0, 0, 0, 0.32);
   --yaa-shadow-hard: 0.25rem 0.25rem 0 var(--yaa-color-secondary);
   --yaa-shadow-hard-primary: 0.25rem 0.25rem 0 var(--yaa-color-primary);
   --yaa-shadow-focus: 0 0 0 0.1875rem rgba(0, 230, 126, 0.34);
@@ -125,6 +155,22 @@
   --yaa-chart-4: #FF9871;
   --yaa-chart-5: #9B8CFF;
   --yaa-chart-6: #65D9FF;
+  --yaa-chart-7: #FF6B9D;
+  --yaa-chart-8: #39D0D8;
+
+  /* Product accents from the former Vanga/SIMMY/Graph/Map system. */
+  --yaa-accent-hub: #FF6B9D;
+  --yaa-accent-vanga: #1DFF9E;
+  --yaa-accent-simmy: #39D0D8;
+  --yaa-accent-graph: #A78BFA;
+  --yaa-accent-map: #FBBF24;
+
+  /* Artist tier colors used by graph and ranking views. */
+  --yaa-tier-star: #FF6B6B;
+  --yaa-tier-large: #FFA94D;
+  --yaa-tier-mid: #FFD93D;
+  --yaa-tier-club: #6BCF7F;
+  --yaa-tier-micro: #4DABF7;
 }
 
 [data-theme="light"] {
@@ -141,15 +187,30 @@
   --yaa-surface-2: #EAF0EC;
   --yaa-surface-3: #DDE6E0;
   --yaa-border-subtle: #CDD8D0;
+  --yaa-border-mid: #AAB9AF;
   --yaa-border-strong: #89968D;
 
+  --yaa-color-primary-text: #006B3F;
+  --yaa-color-success-text: #006B3F;
+  --yaa-surface-drop: #FFFFFF;
+  --yaa-surface-input: rgba(0, 107, 63, 0.04);
+  --yaa-surface-input-focus: rgba(0, 107, 63, 0.08);
+  --yaa-nav-bg: rgba(255, 255, 255, 0.92);
+
   --yaa-shadow-soft: 0 0.5rem 1.5rem rgba(14, 14, 14, 0.12);
+  --yaa-elev-1: var(--yaa-shadow-soft);
+  --yaa-elev-2: 0 1rem 2.5rem rgba(14, 14, 14, 0.18);
 }
 
 [data-theme="dark"],
 .dark {
   color-scheme: dark;
   --yaa-color-primary-text: #00E67E;
+  --yaa-color-success-text: #00E67E;
+  --yaa-surface-drop: #101A14;
+  --yaa-surface-input: rgba(0, 230, 126, 0.04);
+  --yaa-surface-input-focus: rgba(0, 230, 126, 0.08);
+  --yaa-nav-bg: rgba(14, 14, 14, 0.88);
 }
 
 .yaa-theme {

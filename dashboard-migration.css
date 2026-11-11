@@ -69,6 +69,12 @@
   color: var(--yaa-color-primary-text);
 }
 
+.yaa-dashboard .text-indigo-400,
+.yaa-dashboard .text-indigo-500,
+.yaa-dashboard .text-indigo-600 {
+  color: var(--yaa-color-primary-text);
+}
+
 .yaa-dashboard .font-sans {
   font-family: var(--yaa-font-body);
 }
@@ -130,6 +136,15 @@
 .yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\:text-emerald-500,
 :is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\:text-green-500,
 .yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\:text-green-500 {
+  color: var(--yaa-color-primary);
+}
+
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\:text-indigo-400,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\:text-indigo-400,
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\:text-indigo-500,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\:text-indigo-500,
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\:text-indigo-600,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\:text-indigo-600 {
   color: var(--yaa-color-primary);
 }
 

@@ -1,0 +1,46 @@
+/*
+ * Tailwind v4 theme bridge for YAA dashboards.
+ * Load after `@import "tailwindcss"` in globals.css.
+ * Values resolve through tokens.css, so dark: utilities and light surfaces
+ * share the same source of truth without priority overrides.
+ */
+
+@theme {
+  --color-gray-950: var(--yaa-surface-0);
+  --color-gray-900: var(--yaa-surface-1);
+  --color-gray-800: var(--yaa-surface-2);
+  --color-gray-700: var(--yaa-surface-3);
+  --color-gray-600: var(--yaa-border-mid);
+  --color-gray-500: var(--yaa-text-muted);
+  --color-gray-400: var(--yaa-text-secondary);
+  --color-gray-300: var(--yaa-text-secondary);
+  --color-gray-200: var(--yaa-text-primary);
+  --color-gray-100: var(--yaa-text-primary);
+  --color-gray-50: var(--yaa-text-primary);
+
+  --color-indigo-300: var(--yaa-color-primary-bright);
+  --color-indigo-400: var(--yaa-color-primary-bright);
+  --color-indigo-500: var(--yaa-color-primary);
+  --color-indigo-600: var(--yaa-color-primary);
+  --color-indigo-700: var(--yaa-color-primary-text);
+
+  --color-emerald-400: var(--yaa-color-primary-bright);
+  --color-emerald-500: var(--yaa-color-primary);
+  --color-emerald-600: var(--yaa-color-primary);
+  --color-emerald-700: var(--yaa-color-primary-text);
+
+  --color-green-500: var(--yaa-color-primary);
+  --color-green-600: var(--yaa-color-primary);
+}
+
+.yaa-dashboard {
+  background: var(--yaa-surface-0);
+  color: var(--yaa-text-primary);
+  font-family: var(--yaa-font-body);
+}
+
+.yaa-dashboard a.text-emerald-500,
+.yaa-dashboard a.text-green-500,
+.yaa-dashboard a.text-indigo-500 {
+  color: var(--yaa-color-primary-text);
+}

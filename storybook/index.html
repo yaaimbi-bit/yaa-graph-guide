@@ -3,110 +3,155 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>YAA Design System — dashboard demo</title>
+  <title>YAA Design System — Foundations</title>
   <link rel="stylesheet" href="../tokens.css">
   <link rel="stylesheet" href="../themes/dark.css">
   <link rel="stylesheet" href="../themes/light.css">
   <link rel="stylesheet" href="../components/components.css">
   <style>
-    body { margin: 0; }
-    .preview { max-width: 1180px; margin: 0 auto; padding: 32px; }
-    .preview__logo { display: block; height: 48px; margin-bottom: 16px; width: auto; }
-    .preview__header { align-items: center; display: flex; justify-content: space-between; gap: 24px; margin-bottom: 32px; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--yaa-surface-0); color: var(--yaa-text-primary); }
+    .preview { max-width: 1240px; margin: 0 auto; padding: 32px; }
+    .preview__header { align-items: center; display: flex; gap: 24px; justify-content: space-between; margin-bottom: 40px; }
+    .preview__brand { align-items: flex-start; display: flex; flex-direction: column; gap: 12px; }
+    .preview__logo { display: block; height: 40px; width: auto; }
+    .preview__logo--light { display: none; }
+    [data-theme="light"] .preview__logo--dark { display: none; }
+    [data-theme="light"] .preview__logo--light { display: block; }
+    .preview__muted { color: var(--yaa-text-secondary); }
+    .preview__section { margin-top: 32px; }
     .preview__grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
     .preview__stack { display: grid; gap: 12px; }
     .preview__row { align-items: center; display: flex; flex-wrap: wrap; gap: 12px; }
-    .preview__metric { font-size: 32px; font-weight: 700; }
-    .preview__muted { color: var(--yaa-text-secondary); }
+    .preview__metric { font-family: var(--yaa-font-accent); font-size: var(--yaa-font-size-h1); font-weight: 700; }
+    .preview__swatches { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
+    .preview__swatch { border-radius: var(--yaa-radius-md); min-height: 72px; padding: 12px; }
+    .preview__chart-bars { align-items: end; display: flex; gap: 8px; height: 120px; margin-top: 20px; }
+    .preview__chart-bars span { background: var(--yaa-chart-1); border-radius: 4px 4px 0 0; flex: 1; min-width: 12px; }
+    .preview__chart-bars span:nth-child(2) { background: var(--yaa-chart-2); }
+    .preview__chart-bars span:nth-child(3) { background: var(--yaa-chart-3); }
+    .preview__chart-bars span:nth-child(4) { background: var(--yaa-chart-4); }
+    .preview__chart-bars span:nth-child(5) { background: var(--yaa-chart-5); }
+    .preview__chart-bars span:nth-child(6) { background: var(--yaa-chart-6); }
+    .preview__chart-bars span:nth-child(7) { background: var(--yaa-chart-7); }
+    .preview__chart-bars span:nth-child(8) { background: var(--yaa-chart-8); }
+    .preview__small { font-size: var(--yaa-font-size-sm); }
+    @media (max-width: 720px) { .preview { padding: 20px; } .preview__header { align-items: flex-start; flex-direction: column; } }
   </style>
 </head>
 <body class="yaa-theme">
   <main class="preview">
     <header class="preview__header">
-      <div>
-        <img class="preview__logo" src="../assets/brand/YAA_logo_color.svg" alt="YAA">
-        <span class="yaa-label">YAA Graph Guide</span>
-        <h1 class="yaa-heading">Дашборд для команды</h1>
-        <p class="preview__muted">Токены, состояния и темы в одном экране.</p>
+      <div class="preview__brand">
+        <img class="preview__logo preview__logo--dark" src="../assets/brand/YAA_logo_color.svg" alt="YAA">
+        <img class="preview__logo preview__logo--light" src="../assets/brand/YAA_logo_black.svg" alt="YAA">
+        <span class="yaa-label">YAA Graph Guide / Foundations</span>
+        <h1 class="yaa-heading">Дизайн-система для команды</h1>
+        <p class="preview__muted">Одинаковые токены, состояния и компоненты в dark/light теме.</p>
       </div>
       <button class="yaa-button yaa-button--secondary" type="button" id="theme-toggle">Светлая тема</button>
     </header>
 
-    <section class="preview__grid">
-      <article class="yaa-card">
-        <span class="yaa-label">Card</span>
-        <div class="preview__metric">3,53</div>
-        <p class="preview__muted">ROMI за период</p>
-      </article>
+    <section class="preview__section preview__stack">
+      <span class="yaa-label">Colors</span>
+      <div class="preview__swatches">
+        <div class="preview__swatch" style="background: var(--yaa-color-primary); color: var(--yaa-text-on-primary)">Primary<br><b>#00E67E</b></div>
+        <div class="preview__swatch" style="background: var(--yaa-color-secondary); color: #fff">Secondary<br><b>#444FC5</b></div>
+        <div class="preview__swatch" style="background: var(--yaa-surface-2)">Surface<br><b>theme</b></div>
+        <div class="preview__swatch" style="background: var(--yaa-color-error); color: var(--yaa-text-on-error)">Error<br><b>#FF9871</b></div>
+      </div>
+    </section>
 
-      <article class="yaa-card yaa-card--interactive">
-        <span class="yaa-label">Interactive card</span>
-        <div class="preview__metric">52,21 ₽</div>
-        <p class="preview__muted">CPA с hover-состоянием</p>
+    <section class="preview__section preview__grid">
+      <article class="yaa-card preview__stack">
+        <span class="yaa-label">Typography</span>
+        <div class="yaa-heading" style="font-size: var(--yaa-font-size-h2)">Druck Cyrillic Heavy</div>
+        <div style="font-family: var(--yaa-font-accent); font-size: var(--yaa-font-size-lg)">Roboto Flex — акцентные числа</div>
+        <div>Inter Tight — основной наборный текст</div>
+        <span class="preview__muted preview__small">hero 64 · h1 32 · h2 24 · body 14 · label 11</span>
       </article>
-
-      <article class="yaa-card">
-        <span class="yaa-label">Button</span>
-        <div class="preview__row">
-          <button class="yaa-button yaa-button--primary">Primary</button>
-          <button class="yaa-button yaa-button--secondary">Secondary</button>
-          <button class="yaa-button yaa-button--ghost">Ghost</button>
+      <article class="yaa-card preview__stack">
+        <span class="yaa-label">KPI</span>
+        <div class="yaa-kpi">
+          <span class="yaa-kpi__label">ROMI</span>
+          <strong class="yaa-kpi__value">3,53</strong>
+          <span class="yaa-kpi__delta yaa-kpi__delta--positive">↗ 12,4% за период</span>
         </div>
       </article>
+    </section>
 
-      <article class="yaa-card preview__stack">
-        <label class="yaa-label" for="preview-input">TextInput</label>
-        <input class="yaa-input" id="preview-input" placeholder="Введите значение">
-        <label class="yaa-label" for="preview-select">Select</label>
-        <select class="yaa-select" id="preview-select">
-          <option>Все каналы</option>
-          <option>Яндекс Директ</option>
-          <option>VK Ads</option>
-        </select>
-      </article>
+    <section class="preview__section preview__stack">
+      <span class="yaa-label">Navigation / actions</span>
+      <nav class="yaa-tabs" aria-label="Разделы">
+        <button class="yaa-tab" aria-selected="true">Обзор</button>
+        <button class="yaa-tab" aria-selected="false">Продажи</button>
+        <button class="yaa-tab" aria-selected="false">Аудитория</button>
+      </nav>
+      <div class="preview__row">
+        <button class="yaa-button yaa-button--primary">Primary</button>
+        <button class="yaa-button yaa-button--secondary">Secondary</button>
+        <button class="yaa-button yaa-button--ghost">Ghost</button>
+        <button class="yaa-button yaa-button--primary" disabled>Disabled</button>
+        <button class="yaa-button yaa-button--primary yaa-button--loading">Loading</button>
+      </div>
+      <div class="preview__row">
+        <span class="yaa-chip" aria-pressed="true" tabindex="0">Активный канал</span>
+        <span class="yaa-chip" tabindex="0">VK Ads</span>
+        <span class="yaa-badge yaa-badge--success">Успех</span>
+        <span class="yaa-badge yaa-badge--warning">Проверка</span>
+        <span class="yaa-badge yaa-badge--error">Ошибка</span>
+      </div>
+    </section>
 
+    <section class="preview__section preview__grid">
       <article class="yaa-card preview__stack">
-        <span class="yaa-label">Badge / Chip</span>
-        <div class="preview__row">
-          <span class="yaa-badge yaa-badge--success">Синхронизировано</span>
-          <span class="yaa-badge yaa-badge--warning">Требует проверки</span>
-          <span class="yaa-badge yaa-badge--error">Ошибка</span>
-          <span class="yaa-chip" tabindex="0">Канал: VK Ads</span>
+        <span class="yaa-label">Forms</span>
+        <input class="yaa-input" placeholder="Имя артиста">
+        <select class="yaa-select"><option>Все каналы</option><option>Яндекс Директ</option></select>
+        <div class="yaa-dropdown yaa-dropdown--open">
+          <button class="yaa-button yaa-button--ghost">Dropdown</button>
+          <div class="yaa-dropdown__menu"><button class="yaa-dropdown__item" aria-selected="true">Все каналы</button><button class="yaa-dropdown__item">VK Ads</button></div>
         </div>
       </article>
+      <article class="yaa-callout yaa-callout--info">
+        <span class="yaa-label">Callout / info</span>
+        Оболочка дашборда меняется, бизнес-данные остаются прежними.
+      </article>
+    </section>
 
+    <section class="preview__section preview__grid">
+      <article class="yaa-chart">
+        <div class="yaa-chart__header"><span class="yaa-label">Chart / 8-series palette</span><span class="preview__muted preview__small">последние 8 периодов</span></div>
+        <div class="preview__chart-bars" aria-label="Пример графика" role="img"><span style="height: 42%"></span><span style="height: 68%"></span><span style="height: 55%"></span><span style="height: 82%"></span><span style="height: 61%"></span><span style="height: 92%"></span><span style="height: 74%"></span><span style="height: 100%"></span></div>
+        <div class="yaa-chart__legend"><span class="yaa-chart__legend-item"><i class="yaa-chart__swatch"></i>Primary</span><span class="yaa-chart__legend-item"><i class="yaa-chart__swatch yaa-chart__swatch--2"></i>SIMMY</span><span class="yaa-chart__legend-item"><i class="yaa-chart__swatch yaa-chart__swatch--7"></i>Ошибка</span></div>
+      </article>
+      <article class="yaa-table-wrap">
+        <table class="yaa-table"><thead><tr><th>Канал</th><th>Расход</th><th>ROMI</th></tr></thead><tbody><tr><td>VK Ads</td><td>120 000 ₽</td><td>3,53</td></tr><tr><td>Яндекс Директ</td><td>98 000 ₽</td><td>2,91</td></tr><tr><td>Органика</td><td>0 ₽</td><td>4,12</td></tr></tbody></table>
+      </article>
+    </section>
+
+    <section class="preview__section preview__grid">
       <article class="yaa-card preview__stack">
         <span class="yaa-label">SignalCell / DataBar</span>
         <span class="yaa-signal-cell yaa-signal-cell--success">Данные актуальны</span>
         <span class="yaa-signal-cell yaa-signal-cell--warning">Синк устарел</span>
-        <div class="yaa-data-bar" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100">
-          <div class="yaa-data-bar__value" style="width: 68%"></div>
-        </div>
+        <div class="yaa-data-bar" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"><div class="yaa-data-bar__value" style="width: 68%"></div></div>
       </article>
-
-      <article class="yaa-callout">
-        <span class="yaa-label">Callout</span>
-        Оболочка дашборда меняется, бизнес-данные остаются прежними.
-      </article>
-
       <article class="yaa-card">
-        <span class="yaa-label">States</span>
-        <div class="preview__row">
-          <button class="yaa-button yaa-button--primary" disabled>Disabled</button>
-          <button class="yaa-button yaa-button--primary yaa-button--loading">Loading</button>
-        </div>
+        <span class="yaa-label">Tooltip</span>
+        <p class="preview__muted">Всплывающий слой с глубокой тенью:</p>
+        <div class="yaa-tooltip" role="tooltip">ROMI считается по подтверждённым продажам.</div>
       </article>
     </section>
   </main>
-
   <script>
     const root = document.documentElement;
     const toggle = document.getElementById("theme-toggle");
-    toggle.addEventListener("click", () => {
-      const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
-      root.dataset.theme = nextTheme;
-      toggle.textContent = nextTheme === "dark" ? "Светлая тема" : "Тёмная тема";
-    });
+    const queryTheme = new URLSearchParams(location.search).get("theme");
+    if (queryTheme === "light" || queryTheme === "dark") root.dataset.theme = queryTheme;
+    const syncToggle = () => { toggle.textContent = root.dataset.theme === "dark" ? "Светлая тема" : "Тёмная тема"; };
+    syncToggle();
+    toggle.addEventListener("click", () => { root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark"; syncToggle(); });
   </script>
 </body>
 </html>

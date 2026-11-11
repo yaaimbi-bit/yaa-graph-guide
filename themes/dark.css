@@ -8,6 +8,15 @@
   --yaa-text-primary: #FFFFFF;
   --yaa-text-secondary: #B8C0BC;
   --yaa-text-muted: #89938D;
+  --yaa-color-primary-text: #00E67E;
+  --yaa-color-success-text: #00E67E;
   --yaa-border-subtle: #343A36;
+  --yaa-border-mid: #465149;
   --yaa-border-strong: #5B655E;
+  --yaa-surface-drop: #101A14;
+  --yaa-surface-input: rgba(0, 230, 126, 0.04);
+  --yaa-surface-input-focus: rgba(0, 230, 126, 0.08);
+  --yaa-nav-bg: rgba(14, 14, 14, 0.88);
+  --yaa-elev-1: var(--yaa-shadow-soft);
+  --yaa-elev-2: 0 1rem 2.5rem rgba(0, 0, 0, 0.32);
 }
