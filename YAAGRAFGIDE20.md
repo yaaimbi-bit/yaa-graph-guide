@@ -477,3 +477,59 @@ telegram-bot-mcp/main.py ┘
 - Архитектурные решения проверять по разделу `Карта репозитория`.
 - Не считать отсутствующие в PDF значения заданными: `font-size`, точные отступы, `border-radius`, `box-shadow`, breakpoints и UI-состояния требуют отдельного решения.
 - Не включать содержимое `.env` и другие секреты в документацию или код.
+
+
+---
+
+## 8. Рабочая дизайн-система v1
+
+Подход основан на артефакте «Дашборды YAA до и после»: сравниваются одинаковые данные в старой и новой оболочке, а решения фиксируются с источником и статусом.
+
+### Реализация
+
+tokens.css
+├── themes/
+│   ├── dark.css
+│   └── light.css
+├── components/
+│   ├── components.css
+│   └── README.md
+├── storybook/
+│   ├── index.html
+│   └── README.md
+├── dashboard-migration.css
+└── migration-guide.md
+
+### Источник решений
+
+- Точные брендовые значения берутся из Brand YAA.pdf.
+- Продуктовые значения, которых нет в PDF, помечены как решения v1 в migration-guide.md.
+- Реальные компоненты и состояния описываются в components/README.md и реализуются в components/components.css.
+- Дашборд мигрируется через scoped-класс yaa-dashboard, чтобы не ломать остальное приложение.
+- Бизнес-данные, формулы и идентификаторы при миграции не меняются.
+
+### Утверждённые базовые токены
+
+- Primary: #00E67E.
+- Primary bright: #00FF8C.
+- Secondary: #444FC5.
+- Dark surface: #0E0E0E.
+- Light surface: #FFFFFF.
+- Text on primary: #0E0E0E.
+- Warning: #FFD166.
+- Error: #FF9871.
+- Font heading: Druck Wide с Archivo fallback до решения по лицензии.
+- Font accent: Roboto Flex.
+- Font body: Inter Tight с Inter fallback.
+- Hard shadow: 4px 4px 0.
+- Spacing: 4, 8, 12, 16, 20, 24, 32px.
+- Radius: 4, 8, 10, 14, 20px.
+
+### Проверка перед миграцией
+
+1. Сверить реальные цифры до и после.
+2. Проверить обе темы.
+3. Проверить default, hover, active, focus-visible, disabled и loading.
+4. Проверить контраст текста.
+5. Убедиться, что локальные HEX-значения не обходят tokens.css.
+6. Зафиксировать новые решения в migration-guide.md.
