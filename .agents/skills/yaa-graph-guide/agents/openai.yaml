@@ -1,0 +1,7 @@
+interface:
+  display_name: "YAA Graph Guide"
+  short_description: "Read YAA architecture and brand rules before coding"
+  default_prompt: "Use $yaa-graph-guide to read YAAGRAFGIDE20.md before coding or reviewing UI."
+
+policy:
+  allow_implicit_invocation: true
