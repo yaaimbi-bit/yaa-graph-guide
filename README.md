@@ -61,11 +61,10 @@ https://github.com/yaaimbi-bit/yaa-graph-guide
 
 ## Font assets
 
-The repository includes the supplied YAA font package under `fonts/`:
+The public repository includes only the fonts that are safe and required for the design system:
 
-- `fonts/druk/drukcyr-heavy.ttf` — primary display font, `Druck Cyrillic Heavy`;
 - `fonts/Roboto_Flex/` — variable Roboto Flex and license files;
 - `fonts/inter/InterTight-Thin.ttf` — supplied Inter Tight Thin;
-- `fonts/Roboto_Serif/` — variable and static Roboto Serif family.
+- `fonts/inter/InterTight.ttf` — variable Inter Tight for regular, medium and semibold weights.
 
-The preview uses Druck Cyrillic Heavy for the main heading and Roboto Flex for secondary headings and metrics.
+Druck Wide is a paid font and is not committed to this public repository. The public preview uses the documented `Druck Wide` token with an `Archivo` fallback. Add a licensed web font only in a private product repository. Roboto Serif is not part of the YAA brand system and is not included.

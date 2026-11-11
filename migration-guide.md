@@ -22,9 +22,9 @@
 | Текст на зелёном | #0E0E0E | решение по контрасту |
 | Warning | #FFD166 | текущая продуктовая DS |
 | Error | #FF9871 | текущая продуктовая DS |
-| Heading | Druck Wide с Archivo fallback | бренд + лицензионное ограничение |
+| Heading | Druck Wide с Archivo fallback | бренд + лицензионное ограничение; файл не хранится публично |
 | Accent | Roboto Flex | Brand YAA.pdf |
-| Body | Inter Tight с Inter fallback | Brand YAA.pdf |
+| Body | Inter Tight variable (`fonts/inter/InterTight.ttf`) с Inter fallback | Brand YAA.pdf |
 | Hard shadow | 4px 4px 0 | визуальное решение из брендбука |
 | Radius | 4, 8, 10, 14, 20px | продуктовая v1-шкала |
 | Spacing | 4, 8, 12, 16, 20, 24, 32px | существующая DS |
@@ -35,7 +35,7 @@
 
 ## Шрифты
 
-Druck Wide — платный шрифт. До подтверждения лицензии используется Archivo как fallback. Не добавляй файл шрифта в репозиторий без подтверждённой лицензии.
+Druck Wide — платный шрифт из роли брендбука. В публичном репозитории файл не хранится; до подтверждения веб-лицензии используется Archivo как fallback. Не добавляй Druck-файл в публичный репозиторий без подтверждённой лицензии.
 
 ## Порядок миграции одного дашборда
 

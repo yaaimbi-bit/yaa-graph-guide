@@ -1,12 +1,4 @@
 @font-face {
-  font-family: "Druck Cyrillic Heavy";
-  src: url("./fonts/druk/drukcyr-heavy.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-}
-
-@font-face {
   font-family: "Roboto Flex";
   src: url("./fonts/Roboto_Flex/RobotoFlex-VariableFont_GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf") format("truetype");
   font-style: normal;
@@ -22,28 +14,12 @@
   font-display: swap;
 }
 
-/* The supplied font folder contains Inter Tight Thin; regular weights use the project fallback. */
+/* Inter Tight variable font covers regular, medium and semibold body weights. */
 @font-face {
   font-family: "Inter Tight";
-  src: url("./fonts/InterTight.ttf") format("truetype");
+  src: url("./fonts/inter/InterTight.ttf") format("truetype");
   font-style: normal;
   font-weight: 200 900;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Roboto Serif";
-  src: url("./fonts/Roboto_Serif/RobotoSerif-VariableFont_GRAD,opsz,wdth,wght.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Roboto Serif";
-  src: url("./fonts/Roboto_Serif/RobotoSerif-Italic-VariableFont_GRAD,opsz,wdth,wght.ttf") format("truetype");
-  font-style: italic;
-  font-weight: 100 900;
   font-display: swap;
 }
 
@@ -81,10 +57,9 @@
   --yaa-border-strong: #5B655E;
 
   /* Typography */
-  --yaa-font-heading: "Druck Cyrillic Heavy", "Druck Wide", "Archivo", sans-serif;
+  --yaa-font-heading: "Druck Wide", "Archivo", sans-serif;
   --yaa-font-accent: "Roboto Flex", sans-serif;
   --yaa-font-body: "Inter Tight", "Inter", sans-serif;
-  --yaa-font-serif: "Roboto Serif", Georgia, serif;
   --yaa-font-mono: "IBM Plex Mono", monospace;
 
   --yaa-font-size-xs: 0.6875rem;
@@ -109,6 +84,7 @@
   --yaa-font-weight-bold: 700;
 
   --yaa-letter-spacing-brand: -0.015em;
+  --yaa-letter-spacing-heading: 0;
   --yaa-letter-spacing-label: 0.06em;
 
   /* Spacing: product decision based on the existing 4–32px scale */

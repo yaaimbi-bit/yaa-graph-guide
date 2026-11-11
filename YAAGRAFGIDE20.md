@@ -518,7 +518,7 @@ tokens.css
 - Text on primary: #0E0E0E.
 - Warning: #FFD166.
 - Error: #FF9871.
-- Font heading: Druck Cyrillic Heavy (`fonts/druk/drukcyr-heavy.ttf`); `Druck Wide` is the PDF role label.
+- Font heading: Druck Wide role with Archivo fallback; paid font files are excluded from this public repository.
 - Font accent: Roboto Flex.
 - Font body: Inter Tight с Inter fallback.
 - Hard shadow: 4px 4px 0.
