@@ -1,0 +1,131 @@
+:root {
+  color-scheme: dark;
+
+  /* Brand source: Brand YAA.pdf */
+  --yaa-color-primary: #00E67E;
+  --yaa-color-primary-bright: #00FF8C;
+  --yaa-color-secondary: #444FC5;
+  --yaa-color-black: #0E0E0E;
+  --yaa-color-white: #FFFFFF;
+
+  /* Product decisions: semantic states */
+  --yaa-color-success: #00E67E;
+  --yaa-color-warning: #FFD166;
+  --yaa-color-error: #FF9871;
+  --yaa-color-info: #444FC5;
+
+  /* Text */
+  --yaa-text-primary: #FFFFFF;
+  --yaa-text-secondary: #B8C0BC;
+  --yaa-text-muted: #89938D;
+  --yaa-text-on-primary: #0E0E0E;
+  --yaa-text-on-secondary: #FFFFFF;
+  --yaa-text-on-warning: #0E0E0E;
+  --yaa-text-on-error: #0E0E0E;
+
+  /* Dark theme surfaces */
+  --yaa-surface-0: #0E0E0E;
+  --yaa-surface-1: #151716;
+  --yaa-surface-2: #1D201E;
+  --yaa-surface-3: #252925;
+  --yaa-border-subtle: #343A36;
+  --yaa-border-strong: #5B655E;
+
+  /* Typography */
+  --yaa-font-heading: "Druck Wide", "Archivo", sans-serif;
+  --yaa-font-accent: "Roboto Flex", sans-serif;
+  --yaa-font-body: "Inter Tight", "Inter", sans-serif;
+  --yaa-font-mono: "IBM Plex Mono", monospace;
+
+  --yaa-font-size-xs: 0.6875rem;
+  --yaa-font-size-sm: 0.75rem;
+  --yaa-font-size-body: 0.875rem;
+  --yaa-font-size-md: 1rem;
+  --yaa-font-size-lg: 1.25rem;
+  --yaa-font-size-xl: 1.5rem;
+  --yaa-font-size-2xl: 2rem;
+  --yaa-font-size-3xl: 2.5rem;
+  --yaa-font-size-4xl: 3rem;
+  --yaa-font-size-display: 4rem;
+
+  --yaa-line-height-tight: 0.9;
+  --yaa-line-height-heading: 1;
+  --yaa-line-height-body: 1.35;
+  --yaa-line-height-relaxed: 1.5;
+
+  --yaa-font-weight-regular: 400;
+  --yaa-font-weight-medium: 500;
+  --yaa-font-weight-semibold: 600;
+  --yaa-font-weight-bold: 700;
+
+  --yaa-letter-spacing-brand: -0.015em;
+  --yaa-letter-spacing-label: 0.06em;
+
+  /* Spacing: product decision based on the existing 4–32px scale */
+  --yaa-space-1: 0.25rem;
+  --yaa-space-2: 0.5rem;
+  --yaa-space-3: 0.75rem;
+  --yaa-space-4: 1rem;
+  --yaa-space-5: 1.25rem;
+  --yaa-space-6: 1.5rem;
+  --yaa-space-8: 2rem;
+
+  /* Radius: product decision, replacing the former xs–xl labels with values */
+  --yaa-radius-xs: 0.25rem;
+  --yaa-radius-sm: 0.5rem;
+  --yaa-radius-md: 0.625rem;
+  --yaa-radius-lg: 0.875rem;
+  --yaa-radius-xl: 1.25rem;
+  --yaa-radius-pill: 999px;
+
+  /* Shadows */
+  --yaa-shadow-none: 0 0 0 transparent;
+  --yaa-shadow-soft: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.24);
+  --yaa-shadow-hard: 0.25rem 0.25rem 0 var(--yaa-color-secondary);
+  --yaa-shadow-hard-primary: 0.25rem 0.25rem 0 var(--yaa-color-primary);
+  --yaa-shadow-focus: 0 0 0 0.1875rem rgba(0, 230, 126, 0.34);
+
+  /* Motion */
+  --yaa-duration-fast: 120ms;
+  --yaa-duration-normal: 180ms;
+  --yaa-duration-slow: 280ms;
+  --yaa-ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  /* Data visualization */
+  --yaa-chart-1: #00E67E;
+  --yaa-chart-2: #444FC5;
+  --yaa-chart-3: #FFD166;
+  --yaa-chart-4: #FF9871;
+  --yaa-chart-5: #9B8CFF;
+  --yaa-chart-6: #65D9FF;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+
+  --yaa-text-primary: #0E0E0E;
+  --yaa-text-secondary: #3E4641;
+  --yaa-text-muted: #66716A;
+  --yaa-text-on-primary: #0E0E0E;
+  --yaa-text-on-secondary: #FFFFFF;
+
+  --yaa-surface-0: #FFFFFF;
+  --yaa-surface-1: #F4F7F5;
+  --yaa-surface-2: #EAF0EC;
+  --yaa-surface-3: #DDE6E0;
+  --yaa-border-subtle: #CDD8D0;
+  --yaa-border-strong: #89968D;
+
+  --yaa-shadow-soft: 0 0.5rem 1.5rem rgba(14, 14, 14, 0.12);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+.yaa-theme {
+  background: var(--yaa-surface-0);
+  color: var(--yaa-text-primary);
+  font-family: var(--yaa-font-body);
+  letter-spacing: var(--yaa-letter-spacing-brand);
+}
