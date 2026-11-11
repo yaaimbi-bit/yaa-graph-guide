@@ -1,4 +1,4 @@
-Установи общий скил YAA Graph Guide на этот локальный компьютер.
+Установи общий скил YAA Graph Guide на локальный компьютер.
 
 Источник:
 https://github.com/yaaimbi-bit/yaa-graph-guide
