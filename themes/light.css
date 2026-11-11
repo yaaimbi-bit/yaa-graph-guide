@@ -1,0 +1,13 @@
+[data-theme="light"],
+.yaa-theme--light {
+  color-scheme: light;
+  --yaa-surface-0: #FFFFFF;
+  --yaa-surface-1: #F4F7F5;
+  --yaa-surface-2: #EAF0EC;
+  --yaa-surface-3: #DDE6E0;
+  --yaa-text-primary: #0E0E0E;
+  --yaa-text-secondary: #3E4641;
+  --yaa-text-muted: #66716A;
+  --yaa-border-subtle: #CDD8D0;
+  --yaa-border-strong: #89968D;
+}
