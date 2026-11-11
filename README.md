@@ -38,3 +38,22 @@ https://github.com/yaaimbi-bit/yaa-graph-guide
 8. Не проси пользователя копировать файлы вручную. Выполни установку, проверку структуры и сообщи итог.
 
 После установки скил должен автоматически применяться перед генерацией кода, изменением архитектуры или разработкой UI.
+
+
+## Состав репозитория
+
+- tokens.css — единый источник CSS-токенов.
+- themes/light.css и themes/dark.css — темы.
+- components/components.css — 9 framework-agnostic компонентов.
+- components/README.md — варианты, состояния и правила доступности.
+- storybook/index.html — статический preview для быстрой визуальной проверки.
+- dashboard-migration.css — scoped-слой для переноса Tailwind-дашбордов.
+- migration-guide.md — решения, источники и критерии миграции.
+- YAAGRAFGIDE20.md — архитектурный и брендовый контекст.
+- .agents/skills/yaa-graph-guide — скил Codex.
+
+## Быстрый preview
+
+Открой storybook/index.html в браузере. Переключатель темы показывает dark/light режимы, а preview содержит Card, Button, TextInput, Select, Badge, Chip, SignalCell, DataBar и Callout.
+
+Для настоящего Storybook runtime подключи tokens.css, components/components.css и dashboard-migration.css к stories выбранного frontend-фреймворка.
