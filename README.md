@@ -57,3 +57,15 @@ https://github.com/yaaimbi-bit/yaa-graph-guide
 Открой storybook/index.html в браузере. Переключатель темы показывает dark/light режимы, а preview содержит Card, Button, TextInput, Select, Badge, Chip, SignalCell, DataBar и Callout.
 
 Для настоящего Storybook runtime подключи tokens.css, components/components.css и dashboard-migration.css к stories выбранного frontend-фреймворка.
+
+
+## Font assets
+
+The repository includes the supplied YAA font package under `fonts/`:
+
+- `fonts/druk/drukcyr-heavy.ttf` — primary display font, `Druck Cyrillic Heavy`;
+- `fonts/Roboto_Flex/` — variable Roboto Flex and license files;
+- `fonts/inter/InterTight-Thin.ttf` — supplied Inter Tight Thin;
+- `fonts/Roboto_Serif/` — variable and static Roboto Serif family.
+
+The preview uses Druck Cyrillic Heavy for the main heading and Roboto Flex for secondary headings and metrics.

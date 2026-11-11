@@ -256,7 +256,7 @@
 }
 
 .yaa-heading {
-  font-family: var(--yaa-font-heading);
+  font-family: "Druck Cyrillic Heavy", var(--yaa-font-heading);
   font-weight: var(--yaa-font-weight-bold);
   letter-spacing: var(--yaa-letter-spacing-brand);
   line-height: var(--yaa-line-height-heading);

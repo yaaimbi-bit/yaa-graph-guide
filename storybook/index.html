@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>YAA component preview</title>
+  <title>YAA Design System — dashboard demo</title>
   <link rel="stylesheet" href="../tokens.css">
   <link rel="stylesheet" href="../themes/dark.css">
   <link rel="stylesheet" href="../themes/light.css">
@@ -11,6 +11,7 @@
   <style>
     body { margin: 0; }
     .preview { max-width: 1180px; margin: 0 auto; padding: 32px; }
+    .preview__logo { display: block; height: 48px; margin-bottom: 16px; width: auto; }
     .preview__header { align-items: center; display: flex; justify-content: space-between; gap: 24px; margin-bottom: 32px; }
     .preview__grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
     .preview__stack { display: grid; gap: 12px; }
@@ -23,8 +24,9 @@
   <main class="preview">
     <header class="preview__header">
       <div>
+        <img class="preview__logo" src="../assets/brand/YAA_logo_color.svg" alt="YAA">
         <span class="yaa-label">YAA Graph Guide</span>
-        <h1 class="yaa-heading">Component preview</h1>
+        <h1 class="yaa-heading">Дашборд для команды</h1>
         <p class="preview__muted">Токены, состояния и темы в одном экране.</p>
       </div>
       <button class="yaa-button yaa-button--secondary" type="button" id="theme-toggle">Светлая тема</button>
