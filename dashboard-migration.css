@@ -1,0 +1,104 @@
+/*
+ * Scope this file to the dashboard root:
+ * <main class="yaa-dashboard">...</main>
+ *
+ * The selectors intentionally map common Tailwind utility classes to YAA
+ * tokens. This is a migration layer, not a replacement for component classes.
+ */
+
+.yaa-dashboard {
+  background: var(--yaa-surface-0);
+  color: var(--yaa-text-primary);
+  font-family: var(--yaa-font-body);
+  letter-spacing: var(--yaa-letter-spacing-brand);
+  min-height: 100%;
+}
+
+.yaa-dashboard .bg-white {
+  background-color: var(--yaa-surface-1) !important;
+}
+
+.yaa-dashboard .bg-gray-50,
+.yaa-dashboard .bg-gray-100 {
+  background-color: var(--yaa-surface-2) !important;
+}
+
+.yaa-dashboard .bg-gray-800,
+.yaa-dashboard .bg-gray-900 {
+  background-color: var(--yaa-surface-0) !important;
+}
+
+.yaa-dashboard .text-gray-900,
+.yaa-dashboard .text-gray-800 {
+  color: var(--yaa-text-primary) !important;
+}
+
+.yaa-dashboard .text-gray-500,
+.yaa-dashboard .text-gray-600 {
+  color: var(--yaa-text-secondary) !important;
+}
+
+.yaa-dashboard .border-gray-200,
+.yaa-dashboard .border-gray-300 {
+  border-color: var(--yaa-border-subtle) !important;
+}
+
+.yaa-dashboard .rounded,
+.yaa-dashboard .rounded-md,
+.yaa-dashboard .rounded-lg {
+  border-radius: var(--yaa-radius-md) !important;
+}
+
+.yaa-dashboard .shadow,
+.yaa-dashboard .shadow-md,
+.yaa-dashboard .shadow-lg {
+  box-shadow: var(--yaa-shadow-soft) !important;
+}
+
+.yaa-dashboard .bg-emerald-400,
+.yaa-dashboard .bg-emerald-500,
+.yaa-dashboard .bg-green-500 {
+  background-color: var(--yaa-color-primary) !important;
+  color: var(--yaa-text-on-primary) !important;
+}
+
+.yaa-dashboard .text-emerald-400,
+.yaa-dashboard .text-emerald-500,
+.yaa-dashboard .text-green-500 {
+  color: var(--yaa-color-primary) !important;
+}
+
+.yaa-dashboard .font-sans {
+  font-family: var(--yaa-font-body) !important;
+}
+
+.yaa-dashboard .yaa-brand-heading {
+  font-family: var(--yaa-font-heading) !important;
+  letter-spacing: var(--yaa-letter-spacing-brand);
+}
+
+.yaa-dashboard .yaa-brand-button {
+  border-radius: var(--yaa-radius-md);
+  box-shadow: var(--yaa-shadow-hard);
+  font-weight: var(--yaa-font-weight-semibold);
+}
+
+.yaa-dashboard table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.yaa-dashboard th {
+  color: var(--yaa-text-secondary);
+  font-size: var(--yaa-font-size-xs);
+  letter-spacing: var(--yaa-letter-spacing-label);
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.yaa-dashboard :focus-visible {
+  box-shadow: var(--yaa-shadow-focus);
+  outline: 2px solid var(--yaa-color-primary);
+  outline-offset: 2px;
+}
