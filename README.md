@@ -68,3 +68,10 @@ The public repository includes only the fonts that are safe and required for the
 - `fonts/inter/InterTight.ttf` — variable Inter Tight for regular, medium and semibold weights.
 
 Druck Wide is a paid font and is not committed to this public repository. The public preview uses the documented `Druck Wide` token with an `Archivo` fallback. Add a licensed web font only in a private product repository. Roboto Serif is not part of the YAA brand system and is not included.
+
+
+## Migration notes
+
+- Load `dashboard-migration.css` after Tailwind utilities.
+- The migration layer supports scoped `dark:bg-*`, `dark:text-*` and `dark:border-*` variants without `!important`.
+- Use `--yaa-color-primary-text: #006B3F` for green text and links on light surfaces. Bright `#00E67E` remains a surface/accent color there.

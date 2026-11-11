@@ -2,8 +2,8 @@
  * Scope this file to the dashboard root:
  * <main class="yaa-dashboard">...</main>
  *
- * The selectors intentionally map common Tailwind utility classes to YAA
- * tokens. This is a migration layer, not a replacement for component classes.
+ * Load this file after Tailwind utilities. The migration layer uses scoped
+ * selectors and no !important, so dark:* utilities remain addressable.
  */
 
 .yaa-dashboard {
@@ -14,67 +14,133 @@
   min-height: 100%;
 }
 
+/* Light/default utility mappings. */
 .yaa-dashboard .bg-white {
-  background-color: var(--yaa-surface-1) !important;
+  background-color: var(--yaa-surface-1);
 }
 
 .yaa-dashboard .bg-gray-50,
 .yaa-dashboard .bg-gray-100 {
-  background-color: var(--yaa-surface-2) !important;
+  background-color: var(--yaa-surface-2);
 }
 
 .yaa-dashboard .bg-gray-800,
 .yaa-dashboard .bg-gray-900 {
-  background-color: var(--yaa-surface-0) !important;
+  background-color: var(--yaa-surface-0);
 }
 
 .yaa-dashboard .text-gray-900,
 .yaa-dashboard .text-gray-800 {
-  color: var(--yaa-text-primary) !important;
+  color: var(--yaa-text-primary);
 }
 
 .yaa-dashboard .text-gray-500,
 .yaa-dashboard .text-gray-600 {
-  color: var(--yaa-text-secondary) !important;
+  color: var(--yaa-text-secondary);
 }
 
 .yaa-dashboard .border-gray-200,
 .yaa-dashboard .border-gray-300 {
-  border-color: var(--yaa-border-subtle) !important;
+  border-color: var(--yaa-border-subtle);
 }
 
 .yaa-dashboard .rounded,
 .yaa-dashboard .rounded-md,
 .yaa-dashboard .rounded-lg {
-  border-radius: var(--yaa-radius-md) !important;
+  border-radius: var(--yaa-radius-md);
 }
 
 .yaa-dashboard .shadow,
 .yaa-dashboard .shadow-md,
 .yaa-dashboard .shadow-lg {
-  box-shadow: var(--yaa-shadow-soft) !important;
+  box-shadow: var(--yaa-shadow-soft);
 }
 
 .yaa-dashboard .bg-emerald-400,
 .yaa-dashboard .bg-emerald-500,
 .yaa-dashboard .bg-green-500 {
-  background-color: var(--yaa-color-primary) !important;
-  color: var(--yaa-text-on-primary) !important;
+  background-color: var(--yaa-color-primary);
+  color: var(--yaa-text-on-primary);
 }
 
 .yaa-dashboard .text-emerald-400,
 .yaa-dashboard .text-emerald-500,
 .yaa-dashboard .text-green-500 {
-  color: var(--yaa-color-primary) !important;
+  color: var(--yaa-color-primary-text);
 }
 
 .yaa-dashboard .font-sans {
-  font-family: var(--yaa-font-body) !important;
+  font-family: var(--yaa-font-body);
+}
+
+/* dark:* utility mappings. Works when dark is on an ancestor or dashboard root. */
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:bg-gray-900,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:bg-gray-900 {
+  background-color: var(--yaa-surface-0);
+}
+
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:bg-gray-800,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:bg-gray-800 {
+  background-color: var(--yaa-surface-1);
+}
+
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:bg-gray-700,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:bg-gray-700 {
+  background-color: var(--yaa-surface-3);
+}
+
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:text-white,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:text-white,
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:text-gray-100,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:text-gray-100,
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:text-gray-200,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:text-gray-200 {
+  color: var(--yaa-text-primary);
+}
+
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:text-gray-300,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:text-gray-300,
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:text-gray-400,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:text-gray-400,
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:text-gray-500,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:text-gray-500 {
+  color: var(--yaa-text-secondary);
+}
+
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:border-gray-700,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:border-gray-700,
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:border-gray-600,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:border-gray-600 {
+  border-color: var(--yaa-border-subtle);
+}
+
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:bg-emerald-400,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:bg-emerald-400,
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:bg-emerald-500,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:bg-emerald-500,
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:bg-green-500,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:bg-green-500 {
+  background-color: var(--yaa-color-primary);
+  color: var(--yaa-text-on-primary);
+}
+
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:text-emerald-400,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:text-emerald-400,
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:text-emerald-500,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:text-emerald-500,
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:text-green-500,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:text-green-500 {
+  color: var(--yaa-color-primary);
+}
+
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:font-sans,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:font-sans {
+  font-family: var(--yaa-font-body);
 }
 
 .yaa-dashboard .yaa-brand-heading {
-  font-family: var(--yaa-font-heading) !important;
-  letter-spacing: var(--yaa-letter-spacing-brand);
+  font-family: var(--yaa-font-heading);
+  letter-spacing: var(--yaa-letter-spacing-heading);
 }
 
 .yaa-dashboard .yaa-brand-button {

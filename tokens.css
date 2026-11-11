@@ -30,6 +30,7 @@
   --yaa-color-primary: #00E67E;
   --yaa-color-primary-bright: #00FF8C;
   --yaa-color-secondary: #444FC5;
+  --yaa-color-primary-text: #006B3F;
   --yaa-color-black: #0E0E0E;
   --yaa-color-white: #FFFFFF;
 
@@ -145,8 +146,10 @@
   --yaa-shadow-soft: 0 0.5rem 1.5rem rgba(14, 14, 14, 0.12);
 }
 
-[data-theme="dark"] {
+[data-theme="dark"],
+.dark {
   color-scheme: dark;
+  --yaa-color-primary-text: #00E67E;
 }
 
 .yaa-theme {

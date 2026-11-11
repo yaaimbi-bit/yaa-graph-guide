@@ -511,6 +511,7 @@ tokens.css
 ### Утверждённые базовые токены
 
 - Primary: #00E67E.
+- Primary text on light: #006B3F; #00E67E is not used as text on white.
 - Primary bright: #00FF8C.
 - Secondary: #444FC5.
 - Dark surface: #0E0E0E.
