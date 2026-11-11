@@ -1,0 +1,269 @@
+.yaa-card {
+  background: var(--yaa-surface-1);
+  border: 1px solid var(--yaa-border-subtle);
+  border-radius: var(--yaa-radius-lg);
+  box-shadow: var(--yaa-shadow-none);
+  color: var(--yaa-text-primary);
+  padding: var(--yaa-space-6);
+}
+
+.yaa-card--interactive {
+  transition: border-color var(--yaa-duration-normal) var(--yaa-ease-standard),
+    transform var(--yaa-duration-normal) var(--yaa-ease-standard),
+    box-shadow var(--yaa-duration-normal) var(--yaa-ease-standard);
+}
+
+.yaa-card--interactive:hover {
+  border-color: var(--yaa-border-strong);
+  box-shadow: var(--yaa-shadow-soft);
+  transform: translateY(-2px);
+}
+
+.yaa-button {
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: var(--yaa-radius-md);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: var(--yaa-font-body);
+  font-size: var(--yaa-font-size-body);
+  font-weight: var(--yaa-font-weight-semibold);
+  gap: var(--yaa-space-2);
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0 var(--yaa-space-4);
+  position: relative;
+  transition: background-color var(--yaa-duration-fast) var(--yaa-ease-standard),
+    border-color var(--yaa-duration-fast) var(--yaa-ease-standard),
+    color var(--yaa-duration-fast) var(--yaa-ease-standard),
+    transform var(--yaa-duration-fast) var(--yaa-ease-standard),
+    box-shadow var(--yaa-duration-fast) var(--yaa-ease-standard);
+}
+
+.yaa-button:focus-visible,
+.yaa-input:focus-visible,
+.yaa-select:focus-visible,
+.yaa-chip:focus-visible {
+  box-shadow: var(--yaa-shadow-focus);
+  outline: 2px solid var(--yaa-color-primary);
+  outline-offset: 2px;
+}
+
+.yaa-button:hover {
+  transform: translate(-1px, -1px);
+}
+
+.yaa-button:active {
+  transform: translate(2px, 2px);
+}
+
+.yaa-button:disabled,
+.yaa-button[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.48;
+  pointer-events: none;
+}
+
+.yaa-button--primary {
+  background: var(--yaa-color-primary);
+  color: var(--yaa-text-on-primary);
+  box-shadow: var(--yaa-shadow-hard);
+}
+
+.yaa-button--primary:hover {
+  background: var(--yaa-color-primary-bright);
+}
+
+.yaa-button--secondary {
+  background: var(--yaa-color-secondary);
+  color: var(--yaa-text-on-secondary);
+  box-shadow: var(--yaa-shadow-hard-primary);
+}
+
+.yaa-button--ghost {
+  background: transparent;
+  border-color: var(--yaa-border-strong);
+  color: var(--yaa-text-primary);
+}
+
+.yaa-button--sm {
+  min-height: 2rem;
+  padding: 0 var(--yaa-space-3);
+}
+
+.yaa-button--lg {
+  min-height: 3.25rem;
+  padding: 0 var(--yaa-space-6);
+}
+
+.yaa-button--loading {
+  cursor: wait;
+}
+
+.yaa-button--loading::after {
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  content: "";
+  height: 1rem;
+  width: 1rem;
+  animation: yaa-spin 700ms linear infinite;
+}
+
+.yaa-input,
+.yaa-select {
+  background: var(--yaa-surface-1);
+  border: 1px solid var(--yaa-border-subtle);
+  border-radius: var(--yaa-radius-md);
+  color: var(--yaa-text-primary);
+  font: inherit;
+  min-height: 2.75rem;
+  padding: 0 var(--yaa-space-3);
+  width: 100%;
+}
+
+.yaa-input::placeholder {
+  color: var(--yaa-text-muted);
+}
+
+.yaa-input[aria-invalid="true"],
+.yaa-select[aria-invalid="true"] {
+  border-color: var(--yaa-color-error);
+}
+
+.yaa-badge,
+.yaa-chip {
+  align-items: center;
+  border-radius: var(--yaa-radius-pill);
+  display: inline-flex;
+  font-size: var(--yaa-font-size-sm);
+  font-weight: var(--yaa-font-weight-semibold);
+  gap: var(--yaa-space-2);
+  line-height: 1;
+  min-height: 1.75rem;
+  padding: 0 var(--yaa-space-3);
+}
+
+.yaa-badge--success {
+  background: var(--yaa-color-success);
+  color: var(--yaa-text-on-primary);
+}
+
+.yaa-badge--warning {
+  background: var(--yaa-color-warning);
+  color: var(--yaa-text-on-warning);
+}
+
+.yaa-badge--error {
+  background: var(--yaa-color-error);
+  color: var(--yaa-text-on-error);
+}
+
+.yaa-badge--info {
+  background: var(--yaa-color-secondary);
+  color: var(--yaa-text-on-secondary);
+}
+
+.yaa-chip {
+  background: var(--yaa-surface-2);
+  border: 1px solid var(--yaa-border-subtle);
+  color: var(--yaa-text-primary);
+}
+
+.yaa-chip:hover {
+  border-color: var(--yaa-color-primary);
+}
+
+.yaa-signal-cell {
+  align-items: center;
+  display: inline-flex;
+  gap: var(--yaa-space-2);
+}
+
+.yaa-signal-cell::before {
+  background: currentColor;
+  border-radius: 50%;
+  content: "";
+  height: 0.5rem;
+  width: 0.5rem;
+}
+
+.yaa-signal-cell--success {
+  color: var(--yaa-color-success);
+}
+
+.yaa-signal-cell--warning {
+  color: var(--yaa-color-warning);
+}
+
+.yaa-signal-cell--error {
+  color: var(--yaa-color-error);
+}
+
+.yaa-signal-cell--info {
+  color: var(--yaa-color-secondary);
+}
+
+.yaa-data-bar {
+  background: var(--yaa-surface-3);
+  border-radius: var(--yaa-radius-pill);
+  height: 0.5rem;
+  overflow: hidden;
+  width: 100%;
+}
+
+.yaa-data-bar__value {
+  background: var(--yaa-color-primary);
+  border-radius: inherit;
+  height: 100%;
+  min-width: 0;
+  transition: width var(--yaa-duration-slow) var(--yaa-ease-standard);
+}
+
+.yaa-data-bar__value--secondary {
+  background: var(--yaa-color-secondary);
+}
+
+.yaa-callout {
+  background: var(--yaa-surface-2);
+  border: 1px solid var(--yaa-border-subtle);
+  border-left: 4px solid var(--yaa-color-info);
+  border-radius: var(--yaa-radius-md);
+  color: var(--yaa-text-primary);
+  padding: var(--yaa-space-4);
+}
+
+.yaa-callout--success {
+  border-left-color: var(--yaa-color-success);
+}
+
+.yaa-callout--warning {
+  border-left-color: var(--yaa-color-warning);
+}
+
+.yaa-callout--error {
+  border-left-color: var(--yaa-color-error);
+}
+
+.yaa-label {
+  color: var(--yaa-text-secondary);
+  display: block;
+  font-size: var(--yaa-font-size-xs);
+  font-weight: var(--yaa-font-weight-semibold);
+  letter-spacing: var(--yaa-letter-spacing-label);
+  margin-bottom: var(--yaa-space-2);
+  text-transform: uppercase;
+}
+
+.yaa-heading {
+  font-family: var(--yaa-font-heading);
+  font-weight: var(--yaa-font-weight-bold);
+  letter-spacing: var(--yaa-letter-spacing-brand);
+  line-height: var(--yaa-line-height-heading);
+}
+
+@keyframes yaa-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
