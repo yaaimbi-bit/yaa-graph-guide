@@ -3,7 +3,7 @@
  * <main class="yaa-dashboard">...</main>
  *
  * Load this file after Tailwind utilities. The migration layer uses scoped
- * selectors and no !important, so dark:* utilities remain addressable.
+ * scoped selectors, so dark:* utilities remain addressable without priority overrides.
  */
 
 .yaa-dashboard {
@@ -74,67 +74,67 @@
 }
 
 /* dark:* utility mappings. Works when dark is on an ancestor or dashboard root. */
-:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:bg-gray-900,
-.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:bg-gray-900 {
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\:bg-gray-900,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\:bg-gray-900 {
   background-color: var(--yaa-surface-0);
 }
 
-:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:bg-gray-800,
-.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:bg-gray-800 {
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\:bg-gray-800,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\:bg-gray-800 {
   background-color: var(--yaa-surface-1);
 }
 
-:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:bg-gray-700,
-.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:bg-gray-700 {
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\:bg-gray-700,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\:bg-gray-700 {
   background-color: var(--yaa-surface-3);
 }
 
-:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:text-white,
-.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:text-white,
-:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:text-gray-100,
-.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:text-gray-100,
-:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:text-gray-200,
-.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:text-gray-200 {
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\:text-white,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\:text-white,
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\:text-gray-100,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\:text-gray-100,
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\:text-gray-200,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\:text-gray-200 {
   color: var(--yaa-text-primary);
 }
 
-:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:text-gray-300,
-.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:text-gray-300,
-:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:text-gray-400,
-.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:text-gray-400,
-:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:text-gray-500,
-.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:text-gray-500 {
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\:text-gray-300,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\:text-gray-300,
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\:text-gray-400,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\:text-gray-400,
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\:text-gray-500,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\:text-gray-500 {
   color: var(--yaa-text-secondary);
 }
 
-:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:border-gray-700,
-.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:border-gray-700,
-:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:border-gray-600,
-.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:border-gray-600 {
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\:border-gray-700,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\:border-gray-700,
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\:border-gray-600,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\:border-gray-600 {
   border-color: var(--yaa-border-subtle);
 }
 
-:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:bg-emerald-400,
-.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:bg-emerald-400,
-:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:bg-emerald-500,
-.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:bg-emerald-500,
-:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:bg-green-500,
-.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:bg-green-500 {
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\:bg-emerald-400,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\:bg-emerald-400,
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\:bg-emerald-500,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\:bg-emerald-500,
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\:bg-green-500,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\:bg-green-500 {
   background-color: var(--yaa-color-primary);
   color: var(--yaa-text-on-primary);
 }
 
-:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:text-emerald-400,
-.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:text-emerald-400,
-:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:text-emerald-500,
-.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:text-emerald-500,
-:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:text-green-500,
-.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:text-green-500 {
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\:text-emerald-400,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\:text-emerald-400,
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\:text-emerald-500,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\:text-emerald-500,
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\:text-green-500,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\:text-green-500 {
   color: var(--yaa-color-primary);
 }
 
-:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\\:font-sans,
-.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\\:font-sans {
+:is(.dark, [data-theme="dark"]) .yaa-dashboard .dark\:font-sans,
+.yaa-dashboard:is(.dark, [data-theme="dark"]) .dark\:font-sans {
   font-family: var(--yaa-font-body);
 }
 
