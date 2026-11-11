@@ -16,7 +16,7 @@
 | Background | `#0E0E0E` / `#FFFFFF` | Brand YAA.pdf |
 | Текст на primary | `#0E0E0E` | решение по контрасту |
 | Текст primary на светлом | `#006B3F` | решение по контрасту |
-| Success / warning / error | `#00E67E` / `#FFD166` / `#FF9871` | success из бренда; warning/error из текущей DS, error нужно подтвердить дизайнером; success text в light = `#006B3F` |
+| Success / warning / error | `#00E67E` / `#FFD166` / `#FF9871` | для текста на светлом фоне: `#006B3F` / `#8A5A00` / `#B42318`; цветные badge сохраняют тёмный текст |
 | Heading | `Druck Cyrillic Heavy` + `Druck Wide`/`Archivo` fallback | предоставленный файл опубликован по решению владельца; веб-лицензия пока не подтверждена |
 | Accent / body | `Roboto Flex` / `Inter Tight` variable | Brand YAA.pdf + OFL-файлы |
 | Radius | `4, 8, 10, 14, 20px` | v1: старые 12/16 нормализованы в 10/14 |

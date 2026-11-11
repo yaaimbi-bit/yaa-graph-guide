@@ -206,11 +206,11 @@
 }
 
 .yaa-signal-cell--warning {
-  color: var(--yaa-color-warning);
+  color: var(--yaa-color-warning-text);
 }
 
 .yaa-signal-cell--error {
-  color: var(--yaa-color-error);
+  color: var(--yaa-color-error-text);
 }
 
 .yaa-signal-cell--info {
@@ -333,7 +333,7 @@
 
 .yaa-kpi__delta--down,
 .yaa-kpi__delta--negative {
-  color: var(--yaa-color-error);
+  color: var(--yaa-color-error-text);
 }
 
 .yaa-table-wrap {

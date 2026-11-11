@@ -10,13 +10,15 @@
   --yaa-text-muted: #66716A;
   --yaa-color-primary-text: #006B3F;
   --yaa-color-success-text: #006B3F;
+  --yaa-color-warning-text: #8A5A00;
+  --yaa-color-error-text: #B42318;
   --yaa-border-subtle: #CDD8D0;
   --yaa-border-mid: #AAB9AF;
   --yaa-border-strong: #89968D;
   --yaa-surface-drop: #FFFFFF;
   --yaa-surface-input: rgba(0, 107, 63, 0.04);
   --yaa-surface-input-focus: rgba(0, 107, 63, 0.08);
-  --yaa-nav-bg: rgba(255, 255, 255, 0.92);
+  --yaa-nav-bg: #FFFFFF;
   --yaa-elev-1: var(--yaa-shadow-soft);
   --yaa-elev-2: 0 1rem 2.5rem rgba(14, 14, 14, 0.18);
 }

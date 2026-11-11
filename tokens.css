@@ -46,7 +46,9 @@
   --yaa-color-success: #00E67E;
   --yaa-color-success-text: #00E67E;
   --yaa-color-warning: #FFD166;
+  --yaa-color-warning-text: #FFD166;
   --yaa-color-error: #FF9871;
+  --yaa-color-error-text: #FF9871;
   --yaa-color-info: #444FC5;
 
   /* Text */
@@ -71,7 +73,7 @@
   --yaa-surface-drop: #101A14;
   --yaa-surface-input: rgba(0, 230, 126, 0.04);
   --yaa-surface-input-focus: rgba(0, 230, 126, 0.08);
-  --yaa-nav-bg: rgba(14, 14, 14, 0.88);
+  --yaa-nav-bg: #0E0E0E;
 
   /* Typography */
   --yaa-font-heading: "Druck Cyrillic Heavy", "Druck Wide", "Archivo", sans-serif;
@@ -192,10 +194,12 @@
 
   --yaa-color-primary-text: #006B3F;
   --yaa-color-success-text: #006B3F;
+  --yaa-color-warning-text: #8A5A00;
+  --yaa-color-error-text: #B42318;
   --yaa-surface-drop: #FFFFFF;
   --yaa-surface-input: rgba(0, 107, 63, 0.04);
   --yaa-surface-input-focus: rgba(0, 107, 63, 0.08);
-  --yaa-nav-bg: rgba(255, 255, 255, 0.92);
+  --yaa-nav-bg: #FFFFFF;
 
   --yaa-shadow-soft: 0 0.5rem 1.5rem rgba(14, 14, 14, 0.12);
   --yaa-elev-1: var(--yaa-shadow-soft);
@@ -207,10 +211,12 @@
   color-scheme: dark;
   --yaa-color-primary-text: #00E67E;
   --yaa-color-success-text: #00E67E;
+  --yaa-color-warning-text: #FFD166;
+  --yaa-color-error-text: #FF9871;
   --yaa-surface-drop: #101A14;
   --yaa-surface-input: rgba(0, 230, 126, 0.04);
   --yaa-surface-input-focus: rgba(0, 230, 126, 0.08);
-  --yaa-nav-bg: rgba(14, 14, 14, 0.88);
+  --yaa-nav-bg: #0E0E0E;
 }
 
 .yaa-theme {

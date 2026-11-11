@@ -38,7 +38,9 @@
 - product accents `hub/vanga/simmy/graph/map` и artist tiers.
 
 `themes/dark.css` и `themes/light.css` переопределяют только тему. В светлой теме
-`--yaa-color-primary-text` равен `#006B3F`, в тёмной — `#00E67E`.
+`--yaa-color-primary-text` равен `#006B3F`, `--yaa-color-warning-text` — `#8A5A00`,
+`--yaa-color-error-text` — `#B42318`; в тёмной теме текстовые токены используют
+яркие брендовые цвета. `--yaa-nav-bg` непрозрачный в обеих темах.
 
 ## 3. Компоненты и паттерны
 

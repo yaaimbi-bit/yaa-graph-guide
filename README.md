@@ -39,7 +39,8 @@ fonts/                     # Roboto Flex, Inter Tight и опубликован�
 | Графики | `--yaa-chart-1` … `--yaa-chart-8` |
 | Продукты | `--yaa-accent-hub`, `vanga`, `simmy`, `graph`, `map` |
 | Artist tier | `--yaa-tier-star`, `large`, `mid`, `club`, `micro` |
-| Поверхности | `--yaa-surface-drop`, `input`, `input-focus`, `nav-bg` |
+| Поверхности | `--yaa-surface-drop`, `input`, `input-focus`, непрозрачный `nav-bg` |
+| Статусы на светлом фоне | `--yaa-color-success-text`, `warning-text: #8A5A00`, `error-text: #B42318` |
 | Типографика | role aliases от `hero` 64px до `label` 11px; `black: 800` |
 | Elevation | `--yaa-elev-1`, `--yaa-elev-2` |
 
@@ -99,6 +100,12 @@ fonts/                     # Roboto Flex, Inter Tight и опубликован�
 и текст используют `--yaa-color-primary-text: #006B3F`, потому что яркий зелёный
 на белом не проходит контраст для обычного текста. На зелёном фоне текст всегда
 `--yaa-text-on-primary: #0E0E0E`.
+
+Для предупреждений и ошибок на светлой теме используются отдельные контрастные
+текстовые токены: `--yaa-color-warning-text: #8A5A00` и
+`--yaa-color-error-text: #B42318`. Цветные badge-фоны сохраняют
+`--yaa-text-on-warning` и `--yaa-text-on-error`. `--yaa-nav-bg` непрозрачный,
+поэтому шапка не просвечивает при прокрутке.
 
 ## Контроль перед публикацией
 
