@@ -91,9 +91,13 @@ Glow, blur, gradient text и radial green background из старой сист�
 │   └── README.md
 ├── assets/brand/
 │   ├── YAA_logo_black.svg
-│   └── YAA_logo_color.svg
+│   ├── YAA_logo_color.svg
+│   ├── favicon.svg
+│   ├── favicon-32.png
+│   ├── favicon.ico
+│   └── apple-touch-icon.png
 ├── fonts/
-│   ├── Roboto_Flex/{OFL.txt,README.txt,*.ttf}
+│   ├── Roboto_Flex/{OFL.txt,README.txt,full variable *.ttf}
 │   ├── inter/{OFL.txt,InterTight-Thin.ttf,InterTight.ttf}
 │   └── druk/drukcyr-heavy.ttf
 └── .agents/skills/yaa-graph-guide/

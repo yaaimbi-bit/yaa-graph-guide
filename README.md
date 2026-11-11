@@ -28,7 +28,7 @@ components/README.md       # API mapping и accessibility rules
 dashboard-theme.css        # Tailwind v4 @theme bridge
 dashboard-migration.css    # scoped fallback для уже собранных utility-классов
 storybook/index.html       # статичный dark/light preview
-assets/brand/              # цветной и чёрный SVG-логотипы
+assets/brand/              # SVG-логотипы и готовые favicon-файлы
 fonts/                     # Roboto Flex, Inter Tight и опубликованный Druck
 ```
 
@@ -51,7 +51,7 @@ fonts/                     # Roboto Flex, Inter Tight и опубликован�
 ## Лицензия шрифтов
 
 - `InterTight.ttf` — variable-файл для `400/500/600/700`, рядом лежит `fonts/inter/OFL.txt`.
-- `Roboto Flex` — variable-файл и OFL в `fonts/Roboto_Flex/`.
+- `Roboto Flex` — полный variable-файл (1 684 624 байта) и OFL в `fonts/Roboto_Flex/`.
 - В брендбуке указана роль `Druck Wide`; в систему добавлен предоставленный
   `Druck Cyrillic Heavy` как фактический display-шрифт. Файл лежит в
   `fonts/druk/drukcyr-heavy.ttf` и подключается через `--yaa-font-heading`.
@@ -68,7 +68,9 @@ fonts/                     # Roboto Flex, Inter Tight и опубликован�
 - Используй `assets/brand/YAA_logo_color.svg` на тёмном фоне и
   `assets/brand/YAA_logo_black.svg` на светлом.
 - Сохраняй пропорции и clear space не меньше высоты знака по периметру.
-- Для favicon подготовь 32px PNG/ICO и 180px touch icon из утверждённого SVG.
+- Готовые favicon-файлы: `assets/brand/favicon.svg`, `favicon-32.png`,
+  `favicon.ico` и `apple-touch-icon.png` (180px). Они отрендерены из
+  утверждённого цветного SVG-логотипа.
 - В CSP-ограниченной среде встраивай готовый SVG/base64; не рисуй текстовый
   псевдологотип и не перекрашивай знак вручную.
 
