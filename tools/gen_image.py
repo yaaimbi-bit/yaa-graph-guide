@@ -24,15 +24,16 @@ REFS = {
 
 BLOCK = {
     "monkey": "Black-and-white high-contrast photo of a monkey (chimpanzee or macaque), cleanly cut out, "
-              "expressive, dressed in human clothes, holding a prop. Flat solid background. A flat vector green "
-              "tentacle with black outline and suckers may pass BEHIND the subject.",
-    "tentacle": "Flat 2D vector tentacles of an octopus: solid fill #00E67E, thick black outline, round suckers, "
+              "expressive, dressed in human clothes, holding a prop. Flat solid background. A flat vector "
+              "tentacle with suckers may pass BEHIND the subject: on a green background it is solid WHITE or solid "
+              "BLACK with thin detail lines; on a black or blue background it is solid green with a black outline.",
+    "tentacle": "Flat 2D vector tentacles of an octopus with thick outline and round suckers (solid white or black on a green background, solid green with black outline on black or blue), "
                 "bold graphic shapes, no realism. They wrap around the scene as a frame or a connecting element.",
     "glass3d": "Glossy 3D glass objects in translucent green, sharp reflections, product-render quality, on a flat "
                "black background. One hero object, simple composition.",
     "field": "Flat solid colour field composition, one hero object, bold shapes, a lot of empty space for a headline.",
-    "mix": "Combine a black-and-white photo monkey with flat green vector tentacles and a glass 3D object. "
-           "The tentacle passes behind the subject.",
+    "mix": "Combine a black-and-white photo monkey with a flat vector tentacle (white or black on a green background) "
+           "and a glass 3D object. The tentacle passes behind the subject.",
 }
 
 COMMON = ("Use the reference images only as the brand style (do not copy their composition or text). "
