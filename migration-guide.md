@@ -100,3 +100,14 @@ utility-слоя и обернуть приложение в `.yaa-dashboard`. �
 поэтому live-проверка остаётся отдельным шагом. `yaa_kz_dasbhoard` и
 `yaa-marketing-brief` требуют smoke-test статичного подключения. Остальные фронты
 нужно инвентаризировать отдельно. `Platinumlist` и `Chatpush` не входят в scope.
+
+## 2026-11-20: сверка с Figma «Brand-YAA»
+
+Слайд «Фирменные шрифты» в Figma называет три роли: акцентный заголовочный `Roboto Flex`
+(межбуквенный −1…−2%, высота строки 75–80%), основной заголовочный `Dela Gothic`
+(−1…−2%), наборный `Inter Tight Regular`. `Druck Cyrillic Heavy` в Figma не упомянут.
+На сайте ya.agency 17.11.2026 Druk заменён на Dela Gothic One (OFL).
+**Открытый вопрос владельцу:** перевести `--yaa-font-heading` на Dela Gothic One и добавить
+`@font-face` с OFL-файлами. Токены в этом изменении не тронуты.
+
+Добавлены `ILLUSTRATIONS.md`, `refs/` и `tools/gen_image.py`: правила и инструмент для картинок.
