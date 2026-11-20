@@ -30,6 +30,9 @@ dashboard-migration.css    # scoped fallback для уже собранных ut
 storybook/index.html       # статичный dark/light preview
 assets/brand/              # SVG-логотипы и готовые favicon-файлы
 fonts/                     # Roboto Flex, Inter Tight и опубликованный Druck
+ILLUSTRATIONS.md           # как делать картинки и иллюстрации (читать, только если они нужны)
+refs/                      # референсы из Figma Brand-YAA: бибизяны, щупальца, 3D, посты, слайды брендбука
+tools/gen_image.py         # генерация картинок в стиле YAA через Nano Banana
 ```
 
 ## Токены, которые добавлены из старой системы

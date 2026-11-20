@@ -102,6 +102,9 @@ Glow, blur, gradient text и radial green background из старой сист�
 │   ├── Roboto_Flex/{OFL.txt,README.txt,full variable *.ttf}
 │   ├── inter/{OFL.txt,InterTight-Thin.ttf,InterTight.ttf}
 │   └── druk/drukcyr-heavy.ttf
+├── ILLUSTRATIONS.md
+├── refs/{monkeys,posts,graphics,3d,mobile,brandbook-slides}
+├── tools/gen_image.py
 └── .agents/skills/yaa-graph-guide/
     ├── SKILL.md
     └── agents/openai.yaml
@@ -122,3 +125,9 @@ BRANDBOOK.md + tracked structure ──> YAAGRAFGIDE20.md
 публикацией проверить существование всех `url()`-ассетов, dark/light preview,
 контраст и состояния компонентов. Не добавлять локальные HEX в компоненты,
 если уже есть соответствующий токен.
+
+## 7. Картинки и иллюстрации
+Если в задаче нужны картинки, иллюстрации, посты или баннеры, прочитай `ILLUSTRATIONS.md`
+(язык графики, палитра, правило «вмеру», чек-лист, шаблон промпта). Референсы из Figma
+лежат в `refs/`, генерация через `tools/gen_image.py`. Если картинки не нужны, этот раздел
+пропускай: интерфейс собирается по токенам и компонентам выше.

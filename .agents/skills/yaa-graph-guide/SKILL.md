@@ -66,3 +66,7 @@ If a real Storybook runtime is present, create stories for the component state m
 ## Security
 
 Never copy secrets from .env files into the graph guide, code, logs, or responses.
+
+## Images and illustrations
+
+Only when the task needs images, illustrations, posts, banners or slides: read `ILLUSTRATIONS.md` in the package root (visual languages, palette, "all cool, in moderation" rule, checklist, prompt template). Style references are in `refs/` (index in `refs/README.md`); generate with `python3 tools/gen_image.py --kind monkey|tentacle|glass3d|field|mix --prompt "..." --out file.webp`. If no imagery is needed, skip all of this and follow the design-system rules above.
